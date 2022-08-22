@@ -1,0 +1,24 @@
+/* ----------------------------------------------------------------
+  フッターのレイアウト
+---------------------------------------------------------------- */
+.page-footer {
+  padding: 0 15px 15px;
+  margin-top: 45px;
+}
+@include res_min( $break ){
+  .page-footer {
+    padding: 0 0 40px;
+    margin-top: 70px;
+    @include maxW(810);
+  }
+}
+
+.page-footer__note {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+@include res_min( $break ){
+  .page-footer__note {
+    font-size: 1.4rem;
+  }
+}

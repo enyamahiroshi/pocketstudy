@@ -1,0 +1,53 @@
+// ----------------------------------------------------------------
+// * Mixins
+// ----------------------------------------------------------------
+
+// トランジション
+@mixin transition($trg: all, $time: .1) {
+  transition: $trg #{$time + s} linear 0s;
+}
+
+//レスポンシブの指定
+@mixin res_min($size: $break) {
+  @media only screen and (min-width: $size + 'px') {
+    @content;
+  }
+}
+@mixin res_max($size: $break) {
+  @media only screen and (max-width: $size + 'px') {
+    @content;
+  }
+}
+
+//max-width
+@mixin maxW($size: $maxsize) {
+  width: 100%;
+  max-width: calc(#{$size + px} + 30px);
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @include res_min( $break ){
+    max-width: calc(#{$size + px} + 100px);
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+//flexbox
+@mixin flex($wrap: nowrap, $justify: flex-start, $alignitems: stretch){
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $alignitems;
+}
+
+// flex-bases
+@mixin flexbases($marginRight, $separateItems){
+  $cntSep: $separateItems - 1;
+  flex-basis: calc((100% / #{$separateItems}) - ((#{$marginRight * $cntSep + px} / #{$separateItems})));
+  margin: #{$marginRight + px} #{$marginRight + px} 0 0;
+  &:nth-of-type(#{$separateItems + n}) {
+    margin-right: 0;
+  }
+}

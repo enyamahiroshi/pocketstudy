@@ -1,0 +1,134 @@
+/* ----------------------------------------------------------------
+  ボタン
+---------------------------------------------------------------- */
+.button {
+  // 基本
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+  min-width: 165px;
+  height: 35px;
+  background-color: #000;
+  border-radius: 999px;
+  font-weight: 800;
+  line-height: 1.5;
+  &:link, &:visited {
+    color: #fff;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    text-decoration: none;
+  }
+
+  // 個別
+  &--more1 {
+    &::after {
+      content: '';
+      margin-left: 5px;
+      width: 13px;
+      height: 100%;
+      background-image: url(../img/common/icon-blank1.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+  }
+  &--more2 {
+    &::after {
+      content: '';
+      margin-left: 5px;
+      width: 15.5px;
+      height: 100%;
+      background-image: url(../img/common/icon-arrow1.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+  }
+
+  // 色
+  &--purple { background-color: #9b36a3; }
+  &--brown { background-color: #6e3a3a; }
+  &--brown02 { background-color: #9E6B6F; }
+  &--gray { background-color: #717171; }
+  &--green { background-color: #69C295; }
+  &--blue { background-color: #7EABDF; }
+  &--yellow { background-color: #ABBB3C; }
+  &--link {
+    &::after {
+      content: '';
+      margin-left: 5px;
+      width: 11px;
+      height: 11px;
+      background-image: url(../img/common/icon-blank1.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      @include res_min($break) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    // background-image: url(../img/plus/);
+    // background-size: 11px 11px;
+    // background-repeat: no-repeat;
+    // background-position: 95% center;
+  }
+}
+@include res_min( $break ){
+  .button {
+    // 基本
+    min-width: 216px;
+    height: 45px;
+    font-size: 1.8rem;
+
+    // 個別
+    &--more1 {
+      &::after {
+        margin-left: 6px;
+        width: 17px;
+      }
+    }
+    &--more2 {
+      &::after {
+        margin-left: 6px;
+        width: 18px;
+      }
+    }
+
+  }
+}
+
+
+/* ----------------------------------------------------------------
+  その他
+---------------------------------------------------------------- */
+//
+.on-sp {}
+.on-pc {
+  display: none;
+}
+@include res_min( $break ){
+  .on-sp {
+    display: none;
+  }
+  .on-pc {
+    display: block;
+  }
+}
+
+// telリンク
+// .link_tel {
+//   &:hover, &:focus {
+//     outline: none;
+//     text-decoration: none;
+//   }
+// }
+// @include res_min( $break ){
+//   .link_tel {
+//     pointer-events: none;
+//   }
+// }

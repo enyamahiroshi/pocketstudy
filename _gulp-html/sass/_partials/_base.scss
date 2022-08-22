@@ -1,0 +1,156 @@
+/* ------------------------------------
+//  base
+// ----------------------------------*/
+* {
+  // スマホでリンクをタップした時の青いハイライト色を変更
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html{
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%; //10px
+}
+body{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: $baseColor;
+  text-align: left;
+  word-wrap : break-word;
+  overflow-wrap : break-word;
+}
+@include res_max( $break ){
+  body{
+  }
+}
+html .bl_content{
+  font-family: $ff-go;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+button {
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  vertical-align: bottom;
+  outline: none;
+  appearance: none;
+  transition: all .1s linear 0s;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+/* ------------------------------------
+//  見出し
+// ----------------------------------*/
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+
+/* ------------------------------------
+//  フォント
+// ----------------------------------*/
+em,
+strong{
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* ------------------------------------
+//  リスト
+// ----------------------------------*/
+ol, ul {
+  list-style: none;
+}
+
+dl, dt, dd {
+  margin: 0;
+}
+
+/* ------------------------------------
+//  段落設定
+// ----------------------------------*/
+p{
+  margin: 1em 0 0;
+}
+
+/* ------------------------------------
+//  画像
+// ----------------------------------*/
+figure {
+  margin: 0;
+}
+img,
+svg {
+  width: auto;
+  height: auto;
+  vertical-align: bottom;
+  line-height: 1;
+}
+@include res_max( $break ){
+}
+
+/* ------------------------------------
+//  リンク
+// ----------------------------------*/
+a{
+  display: inline-block;
+  color: $baseColor;
+  text-decoration: none;
+  transition: all .1s linear 0s;
+  &:link,&:visited {
+    // text-decoration: none;
+  }
+  &:hover,&:active {
+    // opacity: .8;
+  }
+  // ウェブアイコン使用時
+  i{
+    margin: 0 4px;
+  }
+  // transform使用時にchromeでズレが生じるのを防ぐ
+  backface-visibility: hidden;
+}
+//個別にリンクカラー等を変更
+header, footer {
+  a{
+    &:link,&:visited {
+      color: $linkColor;
+      text-decoration: none;
+    }
+    &:hover,&:active {
+      opacity: 1;
+      color: $linkHoverColor;
+    }
+  }
+}
+//画像リンク
+a img {
+  opacity: 1;
+}
+@include res_max( $break ){
+  a img {
+    transition: opacity .1s linear 0s;
+    backface-visibility: hidden;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
