@@ -2,22 +2,20 @@
 // * Valiables
 // ---------------------------------------------------------------
 $break: 768;
-$maxsize: 900;
-$baseFontSize: 15;
+$break2: 1280;
+$maxsize: 800;
+$baseFontSize: 16;
 
-$ff-go: 'M PLUS Rounded 1c', sans-serif;
-$ff-go2: 'NotoSansCJKjp', sans-serif;
-$ff-num: 'Roboto', sans-serif;
-$ff-icon: 'ForkAwesome';
+$ff-go: Helvetica, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", sans-serif;
+$ff-min: "Times New Roman", "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+$ff-en: Helvetica, "Helvetica Neue", Arial, sans-serif;
 
-$baseColor: #000000;
-$mainColor: #002465;
-$mainColorLight: #eaf0fa;
-$linkColor: #333333;
-$linkHoverColor: #333333;
+$ff-num: "Roboto", sans-serif;
 
-$gray1: #B5B5B5;
-$brown: #40210F;
-$red: #FF3C3C;
-$orange: #FF9C15;
-$green: #59D821;
+$baseColor: #000;
+$mainColor: #FF5A1F;
+$keyColor: #CCFF00;
+$linkColor: $baseColor;
+$linkHoverColor: $mainColor;
+
+$attention: #FF0064;

@@ -25,9 +25,9 @@ const source = require('vinyl-source-stream');
 //ファイルパス関係
 const f_root = "../";
 const f_html = "../";
-const f_css = "../css/";
-const f_js = "../js/";
-const f_image = "img/";
+const f_css = "../assets/css/";
+const f_js = "../assets/js/";
+const f_image = "assets/images/";
 const f_image_min = "../" + f_image;
 const f_sass = "sass/";
 const f_es6 = "es6/";

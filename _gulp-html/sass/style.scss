@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&display=swap');
-@import '_core/reset-remedy';
+@import '_core/reset';
 @import '_core/valiables';
 @import '_core/mixins';
-@import '_fonts/notosans-cjk-jp';
 @import '_partials/base';
 @import '_partials/parts';
+@import '_partials/blocks';
 @import '_partials/header';
 @import '_partials/footer';
 @import '_partials/pages';

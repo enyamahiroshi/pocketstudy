@@ -1,0 +1,101 @@
+// ----------------------------------------------------------------
+// slick.css, slick-theme.css を上書きして設定
+// ----------------------------------------------------------------
+
+// Arrow
+.slick-arrow {
+  width: 4% !important;
+  height: calc((80% - 60px) / 3) !important;
+  z-index: 9999 !important;
+  transform: none !important;
+  top: auto !important;
+  bottom: calc(-1 * (calc((80% - 60px) / 3) + 15px)) !important;
+  @include transition();
+  &::before {
+    content: '' !important;
+    opacity: 1 !important;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/kaken-original/icon-slider-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &.slick-prev {
+    left: 8px !important;
+  }
+  &.slick-next {
+    right: 8px !important;
+    &::before {
+      transform: scale(-1,1);
+    }
+  }
+  &:hover {
+    opacity: .6;
+  }
+}
+@include res_min() {
+  .slick-arrow {
+    width: 6% !important;
+    height: calc((80.3% - 120px) / 3) !important;
+    bottom: calc(-1 * (calc((80.3% - 120px) / 3) + 30px)) !important;
+    &.slick-prev {
+      left: 0 !important;
+    }
+    &.slick-next {
+      right: 0 !important;
+    }
+  }
+}
+
+// Dots
+.slick-dots {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: stretch  !important;
+  padding: 0 10px !important;
+  height: 5px !important;
+  position: absolute !important;
+  bottom: -15px !important;
+  //dotの形状を変える
+  li {
+    width: 25% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 2px !important;
+    button {
+      width: 100% !important;
+      height: 100% !important;
+      padding: 0 !important;
+      background-color: #A0B6C4 !important;
+      &::before {
+        content: "" !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+    //active
+    &.slick-active {
+      button {
+        background-color: $mainColor !important;
+      }
+    }
+  }
+}
+@include res_min() {
+  .slick-dots {
+    justify-content: flex-start !important;
+    padding: 0 !important;
+    height: 4px !important;
+    bottom: -31px !important;
+    //dotの形状を変える
+    li {
+      width: 80px !important;
+      margin-right: 10px !important;
+      padding: 0 !important;
+    }
+  }
+}

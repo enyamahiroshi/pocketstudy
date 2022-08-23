@@ -14,53 +14,45 @@ body{
   position: relative;
   width: 100%;
   height: 100%;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.8;
-  letter-spacing: 0;
+  font-family: $ff-go;
+  font-size: 1.5rem;
+  line-height: 1.85;
+  letter-spacing: .06em;
+  @include ls();
   color: $baseColor;
   text-align: left;
   word-wrap : break-word;
   overflow-wrap : break-word;
 }
-@include res_max( $break ){
+@include res_min( $break ){
   body{
+    font-size: 1.6rem;
   }
 }
-html .bl_content{
-  font-family: $ff-go;
+
+// SPで表示
+.sp{}
+@include res_min( $break ){
+  .sp{ display: none; }
 }
+// PCで表示
+.pc{ display: none; }
+@include res_min( $break ){
+  .pc{ display: inline; }
+}
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
 
-button, input, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
-}
-button {
-  padding: 0;
-  margin: 0;
-  font-family: inherit;
-  box-sizing: border-box;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  vertical-align: bottom;
-  outline: none;
-  appearance: none;
-  transition: all .1s linear 0s;
-  &:hover {
-    opacity: .8;
-  }
-}
-
 /* ------------------------------------
 //  見出し
 // ----------------------------------*/
 h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+  line-height: 1.6em;
   margin: 0;
 }
 
@@ -69,26 +61,31 @@ h1,h2,h3,h4,h5,h6{
 // ----------------------------------*/
 em,
 strong{
-  font-weight: 800;
   font-style: normal;
+  font-weight: 600;
 }
 
 /* ------------------------------------
 //  リスト
 // ----------------------------------*/
-ol, ul {
+ol, ul{
   list-style: none;
-}
-
-dl, dt, dd {
   margin: 0;
+  padding: 0;
 }
 
 /* ------------------------------------
 //  段落設定
 // ----------------------------------*/
 p{
-  margin: 1em 0 0;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  margin: 2em auto 0;
+  text-align: left;
+}
+@include res_min( $break ){
+  p{}
 }
 
 /* ------------------------------------
@@ -97,60 +94,67 @@ p{
 figure {
   margin: 0;
 }
+
 img,
 svg {
-  width: auto;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   vertical-align: bottom;
   line-height: 1;
 }
-@include res_max( $break ){
+@include res_min( $break ){
+  img,
+  svg {
+    width: auto;
+  }
 }
 
 /* ------------------------------------
 //  リンク
 // ----------------------------------*/
-a{
+a {
   display: inline-block;
-  color: $baseColor;
   text-decoration: none;
-  transition: all .1s linear 0s;
+  @include transition();
   &:link,&:visited {
-    // text-decoration: none;
+    color: $linkColor;
+    text-decoration: underline;
   }
   &:hover,&:active {
-    // opacity: .8;
+    color: $linkHoverColor;
+    text-decoration: underline;
   }
   // ウェブアイコン使用時
   i{
-    margin: 0 4px;
+    // margin: 0 4px;
   }
-  // transform使用時にchromeでズレが生じるのを防ぐ
-  backface-visibility: hidden;
+  backface-visibility: hidden; // transform使用時にchromeでズレが生じるのを防ぐ
 }
+
 //個別にリンクカラー等を変更
-header, footer {
-  a{
-    &:link,&:visited {
-      color: $linkColor;
+.header,
+.footer {
+  a {
+    &:link, &:visited {
       text-decoration: none;
     }
-    &:hover,&:active {
-      opacity: 1;
-      color: $linkHoverColor;
+    &:hover, &:active {
+      text-decoration: none;
     }
   }
 }
+
 //画像リンク
 a img {
   opacity: 1;
 }
-@include res_max( $break ){
+@include res_min( $break ){
   a img {
-    transition: opacity .1s linear 0s;
-    backface-visibility: hidden;
+    @include transition();
+    backface-visibility: hidden; // transform使用時にchromeでズレが生じるのを防ぐ
     &:hover {
-      opacity: 0.7;
+      opacity: 0.8;
     }
   }
 }

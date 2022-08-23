@@ -1,104 +1,214 @@
 /* ----------------------------------------------------------------
-  ボタン
+  見出し
 ---------------------------------------------------------------- */
-.button {
-  // 基本
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1em;
-  min-width: 165px;
-  height: 35px;
-  background-color: #000;
-  border-radius: 999px;
-  font-weight: 800;
-  line-height: 1.5;
-  &:link, &:visited {
-    color: #fff;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-  &:active {
-    text-decoration: none;
-  }
-
-  // 個別
-  &--more1 {
-    &::after {
-      content: '';
-      margin-left: 5px;
-      width: 13px;
-      height: 100%;
-      background-image: url(../img/common/icon-blank1.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-  }
-  &--more2 {
-    &::after {
-      content: '';
-      margin-left: 5px;
-      width: 15.5px;
-      height: 100%;
-      background-image: url(../img/common/icon-arrow1.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-  }
-
-  // 色
-  &--purple { background-color: #9b36a3; }
-  &--brown { background-color: #6e3a3a; }
-  &--brown02 { background-color: #9E6B6F; }
-  &--gray { background-color: #717171; }
-  &--green { background-color: #69C295; }
-  &--blue { background-color: #7EABDF; }
-  &--yellow { background-color: #ABBB3C; }
-  &--link {
-    &::after {
-      content: '';
-      margin-left: 5px;
-      width: 11px;
-      height: 11px;
-      background-image: url(../img/common/icon-blank1.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      @include res_min($break) {
-        width: 18px;
-        height: 18px;
-      }
-    }
-    // background-image: url(../img/plus/);
-    // background-size: 11px 11px;
-    // background-repeat: no-repeat;
-    // background-position: 95% center;
+.page-title,
+.contents-title {
+  font-size: 2.7rem;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: .03em;
+  color: $mainColor;
+  span {
+    margin-left: 1em;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: .06em;
+    color: $baseColor;
   }
 }
 @include res_min( $break ){
-  .button {
-    // 基本
-    min-width: 216px;
+  .page-title,
+  .contents-title {
+      vertical-align: bottom;
+      font-size: 3.2rem;
+    span {
+      vertical-align: middle;
+      font-size: 2.5rem;
+      letter-spacing: .03em;
+    }
+  }
+}
+
+.page-title {
+  margin-top: 20px;
+}
+@include res_min( $break ){
+  .page-title {
+    margin-top: 50px;
+  }
+}
+
+.block-title1 {
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border-bottom: 2px solid $mainColor;
+}
+@include res_min( $break ){
+  .block-title1 {
+    font-size: 3rem;
+  }
+}
+
+.block-title2 {
+  margin: 1.8em auto 1em;
+  font-size: 2rem;
+  line-height: 1.2;
+  border-bottom: 2px dotted $mainColor;
+}
+@include res_min( $break ){
+  .block-title2 {
+    font-size: 2.5rem;
+  }
+}
+
+.block-title3 {
+  margin: 0 auto 1em;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border-bottom: 2px dotted $mainColor;
+}
+@include res_min( $break ){
+  .block-title3 {
+    font-size: 3rem;
+  }
+}
+
+
+/* ----------------------------------------------------------------
+  ボタン
+---------------------------------------------------------------- */
+.button-wrap {
+  margin-top: 25px;
+}
+@include res_min( $break ){
+  .button-wrap {
+    margin-top: 35px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 4px;
+  line-height: 1.5;
+  position: relative;
+  @include ls(.1);
+  @include transition;
+  &:link, &:visited {
+    text-decoration: none;
+    color: #fff;
+  }
+  &:hover, &:active {
+    opacity: .8;
+  }
+
+  // green
+  &__green {
     height: 45px;
-    font-size: 1.8rem;
+    background-color: #005014;
+  }
+}
+@include res_min( $break ){
 
-    // 個別
-    &--more1 {
-      &::after {
-        margin-left: 6px;
-        width: 17px;
+}
+
+
+/* ----------------------------------------------------------------
+  リスト
+---------------------------------------------------------------- */
+// 記事リスト
+.list-archive {
+  margin: 25px 40px 0 45px;
+  .item {
+    &:not(:first-of-type) {
+      margin-top: 1em;
+    }
+    .item__date {
+      letter-spacing: .06em;
+      color: $mainColor;
+    }
+    .item__content {
+      overflow: hidden;
+      @include transition;
+      .item__content__title {
+        display: block;
+        width: 100%;
+        line-height: 1.6;
+        letter-spacing: 0;
+        border-bottom: 1px dashed #707070;
+        white-space: nowrap;
+        position: relative;
+        &::before {
+          content: '';
+          width: 4em;
+          height: 100%;
+          background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 100%);
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 1;
+          pointer-events: none;
+        }
+        &::after {
+          content: '';
+          width: 12px;
+          height: 100%;
+          background-image: url(../images/common/icon-arrow-r.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100% 14px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 2;
+          pointer-events: none;
+          @include transition;
+        }
+        &:hover {
+          &::after {
+            background-image: url(../images/common/icon-arrow-r-green.svg);
+          }
+        }
+        &:link, &:visited {
+          text-decoration: none;
+        }
+        &:hover, &:active {
+          opacity: 1;
+        }
       }
     }
-    &--more2 {
-      &::after {
-        margin-left: 6px;
-        width: 18px;
+  }
+}
+@include res_min( $break ){
+  .list-archive {
+    margin: 40px 0 0 0;
+    .item {
+      &:not(:first-of-type) {
+        margin-top: 1.6em;
+      }
+      // font-size: 2.5rem;
+      line-height: 1;
+      @include flex(nowrap, flex-start, stretch);
+      .item__date {
+        margin-top: 0.25em;
+        font-weight: 500;
+        letter-spacing: .03em;
+      }
+      .item__content {
+        margin-left: 37px;
+        flex-basis: 100%;
+        .item__content__title {
+          margin-right: 4em;
+        }
       }
     }
-
   }
 }
 
@@ -106,29 +216,41 @@
 /* ----------------------------------------------------------------
   その他
 ---------------------------------------------------------------- */
-//
-.on-sp {}
-.on-pc {
-  display: none;
+// ページトップ
+.button-pagetop {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  z-index: 9999px;
+  opacity: 0;
+  &.is-fixed {
+    opacity: 1;
+  }
+  img {
+    width: 30px;
+  }
 }
 @include res_min( $break ){
-  .on-sp {
-    display: none;
-  }
-  .on-pc {
-    display: block;
+  .button-pagetop {
+    right: 32px;
+    img {
+      width: 60px;
+    }
   }
 }
 
 // telリンク
-// .link_tel {
-//   &:hover, &:focus {
-//     outline: none;
-//     text-decoration: none;
-//   }
-// }
-// @include res_min( $break ){
-//   .link_tel {
-//     pointer-events: none;
-//   }
-// }
+.tel-link {
+  &:link, &:visited {
+    text-decoration: none;
+  }
+  &:hover, &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+@include res_min( $break ){
+  .tel-link {
+    pointer-events: none;
+  }
+}

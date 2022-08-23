@@ -1,0 +1,25 @@
+/* ----------------------------------------------------------------
+  レイアウト
+---------------------------------------------------------------- */
+//メインコンテンツ
+.main {
+  margin-top: 55px;
+}
+@include res_min( $break ){
+  .main {
+    margin-top: 83px;
+  }
+}
+
+// section
+.sec {
+  padding: 0 27px;
+}
+@include res_min( $break ){
+  .sec {
+    padding: 0 8%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+  }
+}

@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------
 
 // トランジション
-@mixin transition($trg: all, $time: .1) {
+@mixin transition($trg: all, $time: .15) {
   transition: $trg #{$time + s} linear 0s;
 }
 
@@ -28,10 +28,15 @@
   margin-left: auto;
   margin-right: auto;
   @include res_min( $break ){
-    max-width: calc(#{$size + px} + 100px);
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: calc(#{$size + px} + 60px);
+    padding-left: 30px;
+    padding-right: 30px;
   }
+}
+
+// letter-spacing
+@mixin ls($em: .06) {
+  letter-spacing: #{$em + em} ;
 }
 
 //flexbox

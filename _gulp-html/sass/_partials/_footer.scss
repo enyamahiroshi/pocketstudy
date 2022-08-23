@@ -1,24 +1,60 @@
 /* ----------------------------------------------------------------
   フッターのレイアウト
 ---------------------------------------------------------------- */
-.page-footer {
-  padding: 0 15px 15px;
-  margin-top: 45px;
-}
-@include res_min( $break ){
-  .page-footer {
-    padding: 0 0 40px;
-    margin-top: 70px;
-    @include maxW(810);
+.footer {
+  padding: 25px 30px;
+  text-align: center;
+  background-color: #005014;
+
+  .copyright{
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #fff;
   }
 }
-
-.page-footer__note {
-  font-size: 1rem;
-  line-height: 1.6;
-}
 @include res_min( $break ){
-  .page-footer__note {
-    font-size: 1.4rem;
+  .footer {
+    padding: 50px 30px;
+    .footer__navi {
+      .footer__navi__menu {
+        margin-top: 1em;
+        background-color: transparent;
+        @include flex(wrap, center, stretch);
+        .menu__item {
+          margin: 0 1em;
+          flex-basis: auto;
+          &:not(:first-of-type) {
+            margin-top: 0;
+          }
+          line-height: 1;
+          a {
+            font-weight: normal;
+            &:link, &:visited {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      //
+      .page-menu {
+
+      }
+
+      //
+      .policy-menu {
+        margin-top: 1.5em;
+        .menu__item {
+          a {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    .copyright{
+      margin-top: 50px;
+      font-size: 1.4rem;
+    }
   }
 }
