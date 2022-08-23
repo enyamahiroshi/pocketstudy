@@ -14,8 +14,7 @@
 }
 @include res_min( $break ){
   .kv {
-    padding: min(4.5vw, 68px) 7.5% min(5.3vw, 79px);
+    padding: unquote('min(4.5vw, 68px)') 7.5% unquote('min(5.3vw, 79px)');
     text-align: center;
   }
 }
-
