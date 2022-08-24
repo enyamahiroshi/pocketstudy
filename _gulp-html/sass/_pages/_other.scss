@@ -7,6 +7,7 @@
   margin-top: 90px;
   padding: 0 20px;
   font-size: 12px;
+  flex-wrap: wrap;
 
   @media only screen and (min-width: 768px) {
     margin-top: 60px;
@@ -59,6 +60,9 @@
 
   @media only screen and (min-width: 768px) {
     font-size: 34px;
+    br{
+      display: none;
+    }
   }
 }
 
@@ -211,5 +215,32 @@
 
   @media only screen and (min-width: 768px) {
     margin: 50px auto 0;
+  }
+}
+.thanksBodyimg{
+  width: 219px;
+  height: 210px;
+  display: block;
+  margin: 50px auto 80px;
+  @media only screen and (min-width: 768px) {
+    margin-top: 70px;
+  }
+}
+.button__top{
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #005014;
+  width: 100%;
+  padding: 19px 0;
+  @media only screen and (min-width: 768px) {
+    max-width: 360px;
+    margin: 0 auto;
+    display: block;
+  }
+  img{
+    margin-left: 4px;
+    width: 15px;
+    height: auto;
   }
 }

@@ -963,6 +963,9 @@ HOME
   margin-top: 90px;
   padding: 0 20px;
   font-size: 12px;
+
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .breadcrumb a{
   text-decoration: none;
@@ -1097,6 +1100,26 @@ HOME
   font-size: 18px;
 }
 
+.thanksBodyimg{
+  display: block;
+  margin: 50px auto 80px; 
+  width: 219px;
+  height: 210px;
+}
+
+.button__top{
+  padding: 19px 0; 
+  width: 100%;
+  border-radius: 5px;
+  background-color: #005014;
+  font-weight: bold;
+  font-size: 18px;
+}
+.button__top img{
+  margin-left: 4px;
+  width: 15px;
+  height: auto;
+}
 @media only screen and (min-width: 768px){
   body{
     font-size: 1.6rem;
@@ -1482,6 +1505,9 @@ HOME
   .page-heading{
     font-size: 34px;
   }
+  .page-heading br{
+    display: none;
+  }
   .page-table{
     margin: 0 auto;
     max-width: 845px;
@@ -1517,8 +1543,15 @@ HOME
   #form_submit_button{
     margin: 50px auto 0;
   }
+  .thanksBodyimg{
+    margin-top: 70px;
+  }
+  .button__top{
+    display: block; 
+    margin: 0 auto;
+    max-width: 360px;
+  }
 }
-
 @media only screen and (min-width: 768px) and (min-width: 768px){
   .sec{
     padding-right: 30px; 
