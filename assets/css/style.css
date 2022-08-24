@@ -1032,6 +1032,11 @@ HOME
   line-height: 1.6;
 }
 
+.error_blank{
+  display: block;
+  color: #d00;
+}
+
 #mail_form{
   margin-top: 10px;
   max-width: 845px;
@@ -1048,13 +1053,22 @@ HOME
   color: #cfcfcf;
 }
 .mail_formItem dt{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+  -ms-flex-pack: end;
+  -ms-flex-align: center;
   margin-bottom: 4px;
   font-weight: bold;
   font-size: 16px;
+
+  align-items: center;
+  justify-content: flex-end;
 }
-.mail_formItem dt.dt_required::after{
+.mail_formItem dt .required{
   margin-left: 5px;
-  padding: 0 4px;
+  padding: 1px 4px 0;
   border: 2px solid #ff5a1f;
   border-radius: 2px;
   color: #ff5a1f;
@@ -1102,13 +1116,13 @@ HOME
 
 .thanksBodyimg{
   display: block;
-  margin: 50px auto 80px; 
+  margin: 50px auto 80px;
   width: 219px;
   height: 210px;
 }
 
 .button__top{
-  padding: 19px 0; 
+  padding: 19px 0;
   width: 100%;
   border-radius: 5px;
   background-color: #005014;
@@ -1529,7 +1543,7 @@ HOME
   }
   .form_txt span{
     display: block;
-    width: 90vw;
+    width: 86vw;
   }
   #mail_form{
     margin: 50px auto 0;
@@ -1547,7 +1561,7 @@ HOME
     margin-top: 70px;
   }
   .button__top{
-    display: block; 
+    display: block;
     margin: 0 auto;
     max-width: 360px;
   }

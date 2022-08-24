@@ -7,6 +7,7 @@
   margin-top: 90px;
   padding: 0 20px;
   font-size: 12px;
+
   flex-wrap: wrap;
 
   @media only screen and (min-width: 768px) {
@@ -60,7 +61,8 @@
 
   @media only screen and (min-width: 768px) {
     font-size: 34px;
-    br{
+
+    br {
       display: none;
     }
   }
@@ -124,9 +126,14 @@
 
     span {
       display: block;
-      width: 90vw;
+      width: 86vw;
     }
   }
+}
+
+.error_blank {
+  display: block;
+  color: #d00;
 }
 
 #mail_form {
@@ -155,22 +162,25 @@
   }
 
   dt {
+    display: flex;
+    flex-direction: row-reverse;
     margin-bottom: 4px;
     font-weight: bold;
     font-size: 16px;
 
-    &.dt_required {
-      &::after {
-        margin-left: 5px;
-        padding: 0 4px;
-        border: 2px solid #ff5a1f;
-        border-radius: 2px;
-        color: #ff5a1f;
-        content: '必須';
-        vertical-align: middle;
-        font-size: 12px;
-        line-height: 1;
-      }
+    align-items: center;
+    justify-content: flex-end;
+
+    .required {
+      margin-left: 5px;
+      padding: 1px 4px 0;
+      border: 2px solid #ff5a1f;
+      border-radius: 2px;
+      color: #ff5a1f;
+      content: '必須';
+      vertical-align: middle;
+      font-size: 12px;
+      line-height: 1;
     }
   }
 
@@ -217,28 +227,33 @@
     margin: 50px auto 0;
   }
 }
-.thanksBodyimg{
-  width: 219px;
-  height: 210px;
+
+.thanksBodyimg {
   display: block;
   margin: 50px auto 80px;
+  width: 219px;
+  height: 210px;
+
   @media only screen and (min-width: 768px) {
     margin-top: 70px;
   }
 }
-.button__top{
-  font-size: 18px;
-  font-weight: bold;
+
+.button__top {
+  padding: 19px 0;
+  width: 100%;
   border-radius: 5px;
   background-color: #005014;
-  width: 100%;
-  padding: 19px 0;
+  font-weight: bold;
+  font-size: 18px;
+
   @media only screen and (min-width: 768px) {
-    max-width: 360px;
-    margin: 0 auto;
     display: block;
+    margin: 0 auto;
+    max-width: 360px;
   }
-  img{
+
+  img {
     margin-left: 4px;
     width: 15px;
     height: auto;
