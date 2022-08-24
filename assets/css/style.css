@@ -960,7 +960,7 @@ HOME
 .breadcrumb{
   display: -ms-flexbox;
   display: flex;
-  margin-top: 90px; 
+  margin-top: 90px;
   padding: 0 20px;
   font-size: 12px;
 }
@@ -976,7 +976,7 @@ HOME
   width: 6px;
   height: 6px;
   border-top: 1px solid #000;
-  border-right: 1px solid #000; 
+  border-right: 1px solid #000;
   content: '';
   vertical-align: middle;
   -ms-transform: rotate(45deg);
@@ -985,12 +985,12 @@ HOME
 
 .main_other{
   padding-top: 80px;
-  padding-bottom: 60px; 
+  padding-bottom: 60px;
   background-color: #fafafa;
 }
 
 .page-heading{
-  margin-bottom: 70px; 
+  margin-bottom: 70px;
   text-align: center;
   font-weight: bold;
   font-size: 25px;
@@ -1014,9 +1014,89 @@ HOME
   text-decoration: none;
 }
 .page-table th{
-  width: 130px; 
+  width: 130px;
   font-weight: bold;
 }
+
+/* ----------------------------------------------------------------
+フォーム
+---------------------------------------------------------------- */
+.form_txt{
+  margin: 0 auto 0;
+  max-width: 845px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#mail_form{
+  margin-top: 10px;
+  max-width: 845px;
+}
+
+.mail_formItem{
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.mail_formItem :-ms-input-placeholder{
+  color: #cfcfcf;
+}
+.mail_formItem ::placeholder{
+  color: #cfcfcf;
+}
+.mail_formItem dt{
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.mail_formItem dt.dt_required::after{
+  margin-left: 5px;
+  padding: 0 4px;
+  border: 2px solid #ff5a1f;
+  border-radius: 2px;
+  color: #ff5a1f;
+  content: '必須';
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 1;
+}
+.mail_formItem [type='text'],
+.mail_formItem [type='email']{
+  padding: 15px;
+  max-width: 100%;
+  width: 350px;
+  border: 1px solid #707070;
+  font-size: 16px;
+}
+.mail_formItem select{
+  padding: 15px;
+  max-width: 100%;
+  width: 370px;
+  border: 1px solid #707070;
+  font-size: 16px;
+}
+.mail_formItem #contents{
+  padding: 15px;
+  width: 100%;
+  height: 140px;
+  border: 1px solid #707070;
+  font-size: 16px;
+}
+
+#form_submit_button{
+  display: block;
+  margin: 40px auto 0;
+  padding: 16.5px 0;
+  max-width: 100%;
+  width: 360px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff5a1f;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 @media only screen and (min-width: 768px){
   body{
     font-size: 1.6rem;
@@ -1391,7 +1471,7 @@ HOME
   }
   .breadcrumb{
     margin-top: 60px;
-    margin-right: auto; 
+    margin-right: auto;
     margin-left: auto;
     max-width: 1300px;
     font-size: 15px;
@@ -1403,7 +1483,7 @@ HOME
     font-size: 34px;
   }
   .page-table{
-    margin: 0 auto; 
+    margin: 0 auto;
     max-width: 845px;
     width: 100%;
     font-size: 18px;
@@ -1418,7 +1498,23 @@ HOME
   .page-table th{
     width: 230px;
   }
+  .form_txt{
+    font-size: 20px;
+  }
+  #mail_form{
+    margin: 50px auto 0;
+  }
+  .mail_formItem{
+    margin-bottom: 30px;
+  }
+  .mail_formItem dt{
+    font-size: 18px;
+  }
+  #form_submit_button{
+    margin: 50px auto 0;
+  }
 }
+
 @media only screen and (min-width: 768px) and (min-width: 768px){
   .sec{
     padding-right: 30px; 

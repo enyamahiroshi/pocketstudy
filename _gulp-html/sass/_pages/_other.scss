@@ -1,20 +1,19 @@
-
 //
 /* ----------------------------------------------------------------
 ベース
 ---------------------------------------------------------------- */
 .breadcrumb {
   display: flex;
-  font-size: 12px;
-  padding: 0 20px;
   margin-top: 90px;
+  padding: 0 20px;
+  font-size: 12px;
 
   @media only screen and (min-width: 768px) {
-    font-size: 15px;
-    max-width: 1300px;
     margin-top: 60px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    max-width: 1300px;
+    font-size: 15px;
   }
 
   a {
@@ -29,23 +28,23 @@
     }
 
     &::after {
-      content: '';
+      display: inline-block;
       margin: -2px 8px 0;
       width: 6px;
       height: 6px;
-      display: inline-block;
-      vertical-align: middle;
-      transform: rotate(45deg);
       border-top: 1px solid #000;
       border-right: 1px solid #000;
+      content: '';
+      vertical-align: middle;
+      transform: rotate(45deg);
     }
   }
 }
 
 .main_other {
-  background-color: #FAFAFA;
   padding-top: 80px;
   padding-bottom: 60px;
+  background-color: #fafafa;
 
   @media only screen and (min-width: 768px) {
     padding-top: 90px;
@@ -53,15 +52,14 @@
 }
 
 .page-heading {
+  margin-bottom: 70px;
   text-align: center;
   font-weight: bold;
   font-size: 25px;
-  margin-bottom: 70px;
 
   @media only screen and (min-width: 768px) {
     font-size: 34px;
   }
-
 }
 
 .sec__other {
@@ -72,10 +70,10 @@
   font-size: 14px;
 
   @media only screen and (min-width: 768px) {
-    font-size: 18px;
+    margin: 0 auto;
     max-width: 845px;
     width: 100%;
-    margin: 0 auto;
+    font-size: 18px;
 
     br {
       display: none;
@@ -98,11 +96,115 @@
   }
 
   th {
-    font-weight: bold;
     width: 130px;
+    font-weight: bold;
 
     @media only screen and (min-width: 768px) {
       width: 230px;
     }
+  }
+}
+
+/* ----------------------------------------------------------------
+フォーム
+---------------------------------------------------------------- */
+.form_txt {
+  margin: 0 auto 0;
+  max-width: 845px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+#mail_form {
+  margin-top: 10px;
+  max-width: 845px;
+
+  @media only screen and (min-width: 768px) {
+    margin: 50px auto 0;
+  }
+}
+
+.mail_formItem {
+  margin-bottom: 20px;
+  font-size: 16px;
+
+  ::placeholder {
+    color: #cfcfcf;
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 30px;
+
+    dt {
+      font-size: 18px;
+    }
+  }
+
+  dt {
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 16px;
+
+    &.dt_required {
+      &::after {
+        margin-left: 5px;
+        padding: 0 4px;
+        border: 2px solid #ff5a1f;
+        border-radius: 2px;
+        color: #ff5a1f;
+        content: '必須';
+        vertical-align: middle;
+        font-size: 12px;
+        line-height: 1;
+      }
+    }
+  }
+
+  [type='text'],
+  [type='email'] {
+    padding: 15px;
+    max-width: 100%;
+    width: 350px;
+    border: 1px solid #707070;
+    font-size: 16px;
+  }
+
+  select {
+    padding: 15px;
+    max-width: 100%;
+    width: 370px;
+    border: 1px solid #707070;
+    font-size: 16px;
+  }
+
+  #contents {
+    padding: 15px;
+    width: 100%;
+    height: 140px;
+    border: 1px solid #707070;
+    font-size: 16px;
+  }
+}
+
+#form_submit_button {
+  display: block;
+  margin: 40px auto 0;
+  padding: 16.5px 0;
+  max-width: 100%;
+  width: 360px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff5a1f;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+
+  @media only screen and (min-width: 768px) {
+    margin: 50px auto 0;
   }
 }
