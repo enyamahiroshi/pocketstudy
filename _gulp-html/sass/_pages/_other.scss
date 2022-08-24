@@ -117,6 +117,11 @@
 
   @media only screen and (min-width: 768px) {
     font-size: 20px;
+
+    span {
+      display: block;
+      width: 90vw;
+    }
   }
 }
 
