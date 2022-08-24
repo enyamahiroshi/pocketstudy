@@ -81,11 +81,12 @@
   ボタン
 ---------------------------------------------------------------- */
 .button-wrap {
-  margin-top: 25px;
+  margin-top: 2em;
+  text-align: center;
 }
 @include res_min( $break ){
   .button-wrap {
-    margin-top: 35px;
+    text-align: left;
   }
 }
 
@@ -114,9 +115,56 @@
     height: 45px;
     background-color: #005014;
   }
+
+  // orange
+  &__orange {
+    padding: .8em 3em;
+    margin: 0 auto;
+    background-color: $mainColor;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.67;
+    text-align: center;
+    &::after {
+      content: '';
+      margin-left: .5em;
+      width: 13px;
+      height: 12px;
+      background-image: url(../images/common/icon-arrow1.svg);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 100%;
+    }
+  }
+
+  // 未稼働
+  &.closed {
+    pointer-events: none;
+    background-color: #fff;
+    border: 1px solid #D3D3D4;
+    &:link, &:visited {
+      color: #D3D3D4;
+    }
+    &.button__orange {
+      &::after {
+        background-image: url(../images/common/icon-arrow2.svg);
+      }
+    }
+  }
 }
 @include res_min( $break ){
+  .button {
+    padding-left: 4em;
+    padding-right: 4em;
 
+    // orange
+    &__orange {
+      padding: 1em 4em;
+      font-size: 1.6rem;
+      border-radius: 4px;
+    }
+  }
 }
 
 
@@ -125,62 +173,24 @@
 ---------------------------------------------------------------- */
 // 記事リスト
 .list-archive {
-  margin: 25px 40px 0 45px;
   .item {
-    &:not(:first-of-type) {
-      margin-top: 1em;
+    padding: 10px 0 8px;
+    border-bottom: 1px solid #D3D3D4;
+    &:first-of-type {
+      border-top: 1px solid #D3D3D4;
     }
     .item__date {
-      letter-spacing: .06em;
-      color: $mainColor;
+      font-size: 1.2rem;
+      line-height: 1.5;
     }
     .item__content {
-      overflow: hidden;
-      @include transition;
+      margin-top: 3px;
+      line-height: 1;
       .item__content__title {
-        display: block;
-        width: 100%;
-        line-height: 1.6;
-        letter-spacing: 0;
-        border-bottom: 1px dashed #707070;
-        white-space: nowrap;
-        position: relative;
-        &::before {
-          content: '';
-          width: 4em;
-          height: 100%;
-          background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 100%);
-          position: absolute;
-          right: 0;
-          top: 0;
-          z-index: 1;
-          pointer-events: none;
-        }
-        &::after {
-          content: '';
-          width: 12px;
-          height: 100%;
-          background-image: url(../images/common/icon-arrow-r.svg);
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 100% 14px;
-          position: absolute;
-          right: 0;
-          top: 0;
-          z-index: 2;
-          pointer-events: none;
-          @include transition;
-        }
-        &:hover {
-          &::after {
-            background-image: url(../images/common/icon-arrow-r-green.svg);
-          }
-        }
+        font-size: 1.5rem;
+        line-height: 1.5;
         &:link, &:visited {
           text-decoration: none;
-        }
-        &:hover, &:active {
-          opacity: 1;
         }
       }
     }
@@ -188,24 +198,17 @@
 }
 @include res_min( $break ){
   .list-archive {
-    margin: 40px 0 0 0;
     .item {
-      &:not(:first-of-type) {
-        margin-top: 1.6em;
-      }
-      // font-size: 2.5rem;
-      line-height: 1;
-      @include flex(nowrap, flex-start, stretch);
+      padding: 16px 38px;
+      @include flex(nowrap, flex-start ,center);
       .item__date {
-        margin-top: 0.25em;
-        font-weight: 500;
-        letter-spacing: .03em;
+        margin-right: 36px;
+        font-size: 1.6rem;
       }
       .item__content {
-        margin-left: 37px;
-        flex-basis: 100%;
+        margin-top: 0;
         .item__content__title {
-          margin-right: 4em;
+          font-size: 2rem;
         }
       }
     }

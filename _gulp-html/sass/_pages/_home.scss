@@ -1,7 +1,109 @@
 /* ----------------------------------------------------------------
-  HOME
+パーツ
 ---------------------------------------------------------------- */
-// kv
+//見出し
+.block-title {
+  margin-bottom: 1em;
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.6;
+  @include ls(.06);
+}
+@include res_min( $break ){
+  .block-title {
+    margin-bottom: .8em;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    @include ls(.08);
+  }
+}
+
+//リスト
+.list-check {
+  .item {
+    padding-left: 30px;
+    font-size: 1.4rem;
+    line-height: 1.57;
+    position: relative;
+    &:not(:first-of-type) {
+      margin-top: 1.5em;
+    }
+    &::before {
+      content: '';
+      width: 17px;
+      height: 100%;
+      background-image: url(../images/common/icon-check.svg);
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+  }
+}
+@include res_min( $break ){
+  .list-check {
+    .item {
+      padding-left: 35px;
+      font-size: 2rem;
+      &:not(:first-of-type) {
+        margin-top: 1.4em;
+      }
+      &::before {
+        width: 18px;
+        top: 6px;
+      }
+    }
+  }
+}
+
+
+//テキストリンク　矢印
+.link-arrow1 {
+  &:link, &:visited {
+    text-decoration: none;
+    color: $mainColor;
+  }
+  &:hover, &:active {
+    opacity: .8;
+  }
+  padding-right: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1;
+  @include ls(.1);
+  position: relative;
+  &::before {
+    content: '';
+    width: 12px;
+    height: 100%;
+    background-image: url(../images/common/icon-arrow3.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+@include res_min( $break ){
+  .link-arrow1 {
+    padding-right: 22px;
+    font-size: 1.6rem;
+
+    &::before {
+      width: 14px;
+      background-position: center top 1px;
+    }
+  }
+}
+
+
+/* ----------------------------------------------------------------
+HOME
+---------------------------------------------------------------- */
+//kv
 .kv {
   padding: 12.8vw 5% 11.5vw;
   .kv__image {
@@ -14,7 +116,297 @@
 }
 @include res_min( $break ){
   .kv {
-    padding: unquote('min(4.5vw, 68px)') 7.5% unquote('min(5.3vw, 79px)');
+    padding: min(4.5vw, 68px) 7.5% min(5.3vw, 79px);
     text-align: center;
+  }
+}
+
+//intro
+.sec.sec-intro {
+  padding-top: 50px;
+  background-image: url(../images/home/bg-intro-left-s.png), url(../images/home/bg-intro-right-s.png);
+  background-repeat: no-repeat;
+  background-position: left top, right top;
+  background-size: 28%, 21.5%;
+  .block-title {
+    font-size: 2rem;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .intro-list {
+    display: grid;
+    justify-content: center;
+  }
+  .button__orange {
+    padding: 1em 2em;
+    border-radius: 4px;
+    color: #fff;
+    &:hover {
+      opacity: 1;
+    }
+    &::after {
+      content: none;
+    }
+  }
+}
+@include res_min( $break ){
+  .sec.sec-intro {
+    padding: 80px 0 0;
+    max-width: none;
+    min-height: 637px;
+    background-image: url(../images/home/bg-intro-left-l.png), url(../images/home/bg-intro-right-l.png);
+    background-size: min(24%, 363px), min(15%, 227px);
+    .block-title {
+      font-size: 3.5rem;
+    }
+    .list-check {
+      .item {
+        padding-left: 45px;
+        font-size: 2.5rem;
+        &:not(:first-of-type) {
+          margin-top: .8em;
+        }
+        &::before {
+          width: 22px;
+          top: 8px;
+        }
+      }
+    }
+    .button-wrap {
+      text-align: center;
+    }
+    .button__orange {
+      padding: 1.2em 3em;
+      margin-top: 18px;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+
+//セパレートタイプのボックス共通
+.sec-separate {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #FAFAFA;
+  @include flex(nowrap, flex-start, stretch);
+  flex-direction: column-reverse;
+  gap: 35px;
+  position: relative;
+  &::before {
+    content: '';
+    width: 86%;
+    height: 1px;
+    background-color: #D3D3D4;
+    position: absolute;
+    left: 7%;
+    top: 0;
+  }
+  //文章等のボックス
+  .separate-block {
+    p {
+      font-size: 1.4rem;
+    }
+    .closed-msg {
+      margin-top: .8em;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  //画像のボックス
+  .separate-image {
+
+  }
+}
+@include res_min( $break ){
+  .sec-separate {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 0;
+    &::before {
+      width: 100%;
+      max-width: 1280px;
+      left: 30px;
+    }
+    //文章等のボックス
+    .separate-block {
+      flex-basis: 50%;
+      p {
+        font-size: 2rem;
+        line-height: 1.5;
+      }
+      .closed-msg {
+        margin-top: .5em;
+        font-size: 1.6rem;
+        text-align: left;
+      }
+    }
+    //画像のボックス
+    .separate-image {
+      flex-basis: calc(50% - 70px);
+    }
+
+    //交互
+    &:nth-of-type(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+
+//favorit teacher
+.sec-favorite_teacher {
+  margin-top: 60px;
+  &::before {
+    content: none;
+  }
+}
+@include res_min( $break ){
+  .sec-favorite_teacher {
+    margin-top: 100px;
+  }
+}
+
+
+//オンライン学習のすべてが一ヶ所に
+.sec-service {
+  margin-top: 55px;
+  .block-title {
+    text-align: center;
+  }
+  .intro {
+    font-size: 1.4rem;
+    @include ls(.02);
+    text-align: center;
+  }
+}
+@include res_min( $break ){
+  .sec-service {
+    margin-top: 150px;
+    .block-title {
+      margin-bottom: 20px;
+      font-size: 5.4rem;
+      @include ls(.1);
+    }
+    .intro {
+      font-size: 2rem;
+    }
+  }
+}
+
+.service {
+  margin-top: 10px;
+  @include flex(wrap, space-between, stretch);
+  .service__item {
+    flex-basis: calc(50% - 20px);
+    margin-top: 40px;
+    text-align: center;
+    .service__item__image {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 200px;
+      img {
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .service__item__title {
+      margin-top: 16px;
+      min-height: 3em;
+      @include flex(nowrap, center, center);
+      font-size: 1.9rem;
+      font-weight: bold;
+      line-height: 1.47;
+      @include ls(.08);
+    }
+    .service__item__text {
+      margin-top: 8px;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      @include ls(.02);
+    }
+
+    //先頭だけ
+    &:first-of-type {
+      flex-basis: 100%;
+      & > * {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(50% - 20px);
+      }
+    }
+  }
+}
+@include res_min( $break ){
+  .service {
+    margin-top: 20px;
+    justify-content: center;
+    .service__item {
+      flex-basis: calc(25% - 60px);
+      margin: 75px 30px 0;
+      .service__item__title {
+        display: block;
+        margin-top: 20px;
+        min-height: auto;
+        font-size: 2rem;
+      }
+      .service__item__text {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        @include ls(.08);
+      }
+
+      //先頭だけ
+      &:first-of-type {
+        flex-basis: calc(25% - 60px);
+        & > * {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+//news
+.sec-news {
+  padding: 50px 30px 80px;
+  margin-top: 50px;
+  background-color: #FAFAFA;
+  .block-title {
+    margin-bottom: 0;
+    text-align: center;
+    .more {
+      text-align: right;
+    }
+  }
+  .list-archive {
+    margin-top: 5px;
+  }
+}
+@include res_min( $break ){
+  .sec-news {
+    padding: 60px 0 100px;
+    margin-top: 100px;
+    & > * {
+      @include maxW;
+    }
+    .block-title {
+      padding-left: 50px;
+      text-align: left;
+      position: relative;
+      .more {
+        position: absolute;
+        right: 50px;
+        top: 0;
+      }
+    }
+    .list-archive {
+      margin-top: 20px;
+    }
   }
 }
