@@ -52,6 +52,15 @@
     const target = href == "#" || href == "" ? 'html' : href;
     const position = $(target).offset().top - headerHeight;
     $("html, body").stop().animate({scrollTop:position}, speed, 'swing');
+
+    if (body.hasClass(classname)) {
+      body.removeClass(classname);
+      header.removeClass(classname);
+    } else {
+      body.addClass(classname);
+      header.addClass(classname);
+    }
+
     return false;
   });
   $(window).on('load', function () {
