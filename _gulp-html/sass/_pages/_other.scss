@@ -310,3 +310,17 @@
     list-style: decimal;
   }
 }
+
+/* ----------------------------------------------------------------
+一時対応
+---------------------------------------------------------------- */
+// [disabled].button__orange{
+//   background-color: transparent;
+//   color: #C9C9CA;
+//   border: 1px solid #C9C9CA;
+//   pointer-events: none;
+// }
+.link-desable {
+  opacity: .2;
+  pointer-events: none;
+}

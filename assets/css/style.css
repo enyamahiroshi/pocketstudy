@@ -1177,6 +1177,13 @@ HOME
   list-style: decimal;
 }
 
+/* ----------------------------------------------------------------
+一時対応
+---------------------------------------------------------------- */
+.link-desable{
+  opacity: .2;
+  pointer-events: none;
+}
 @media only screen and (min-width: 768px){
   body{
     font-size: 1.6rem;
@@ -1609,7 +1616,6 @@ HOME
     max-width: 360px;
   }
 }
-
 @media only screen and (min-width: 768px) and (min-width: 768px){
   .sec{
     padding-right: 30px; 
