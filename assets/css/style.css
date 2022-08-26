@@ -1134,6 +1134,45 @@ HOME
   width: 15px;
   height: auto;
 }
+
+/* ----------------------------------------------------------------
+プラポリ
+---------------------------------------------------------------- */
+.bl_orangePage{
+  margin-bottom: 30px; 
+  color: #ff5a1f;
+  font-weight: 600;
+}
+
+.l-page-multi-purpose a{
+  color: #ff5a1f;
+}
+
+.l-page-multi-purpose h2{
+  margin-top: 30px; 
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.l-page-multi-purpose p{
+  margin-bottom: 15px;
+}
+
+.l-page-multi-purpose ul,
+.l-page-multi-purpose ol{
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.l-page-multi-purpose ul li::before{
+  content: '・';
+}
+
+.l-page-multi-purpose ol{
+  list-style: decimal;
+}
+
 @media only screen and (min-width: 768px){
   body{
     font-size: 1.6rem;
@@ -1566,6 +1605,7 @@ HOME
     max-width: 360px;
   }
 }
+
 @media only screen and (min-width: 768px) and (min-width: 768px){
   .sec{
     padding-right: 30px; 

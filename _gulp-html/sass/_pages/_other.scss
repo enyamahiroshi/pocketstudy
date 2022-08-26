@@ -259,3 +259,43 @@
     height: auto;
   }
 }
+
+/* ----------------------------------------------------------------
+プラポリ
+---------------------------------------------------------------- */
+.bl_orangePage{
+  color: #FF5A1F;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.l-page-multi-purpose{
+  a{
+    color: #FF5A1F;
+  }
+  h2{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+  p{
+    margin-bottom: 15px;
+    // padding-left: 1em;
+    // text-indent: -1em;
+  }
+  ul,ol{
+    margin-bottom: 15px;
+    padding-left: 20px;
+
+  }
+  ul{
+    li{
+      &::before{
+      content:'・';
+      }
+    }
+  }
+  ol{
+    list-style: decimal;
+  }
+}
