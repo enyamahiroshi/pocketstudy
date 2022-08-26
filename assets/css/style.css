@@ -1077,6 +1077,9 @@ HOME
   font-size: 12px;
   line-height: 1;
 }
+.mail_formItem dt .optional{
+  margin-left: 20px;
+}
 .mail_formItem [type='text'],
 .mail_formItem [type='email']{
   padding: 15px;
@@ -1133,13 +1136,14 @@ HOME
   margin-left: 4px;
   width: 15px;
   height: auto;
+  vertical-align: middle;
 }
 
 /* ----------------------------------------------------------------
 プラポリ
 ---------------------------------------------------------------- */
 .bl_orangePage{
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
   color: #ff5a1f;
   font-weight: 600;
 }
@@ -1149,7 +1153,7 @@ HOME
 }
 
 .l-page-multi-purpose h2{
-  margin-top: 30px; 
+  margin-top: 30px;
   margin-bottom: 15px;
   font-weight: 600;
   font-size: 18px;
@@ -1582,7 +1586,7 @@ HOME
   }
   .form_txt span{
     display: block;
-    width: 86vw;
+    width: 80vw;
   }
   #mail_form{
     margin: 50px auto 0;

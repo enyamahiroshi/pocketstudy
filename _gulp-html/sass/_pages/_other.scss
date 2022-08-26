@@ -126,7 +126,7 @@
 
     span {
       display: block;
-      width: 86vw;
+      width: 80vw;
     }
   }
 }
@@ -181,6 +181,10 @@
       vertical-align: middle;
       font-size: 12px;
       line-height: 1;
+    }
+
+    .optional {
+      margin-left: 20px;
     }
   }
 
@@ -257,45 +261,52 @@
     margin-left: 4px;
     width: 15px;
     height: auto;
+    vertical-align: middle;
   }
 }
 
 /* ----------------------------------------------------------------
 プラポリ
 ---------------------------------------------------------------- */
-.bl_orangePage{
-  color: #FF5A1F;
-  font-weight: 600;
+.bl_orangePage {
   margin-bottom: 30px;
+  color: #ff5a1f;
+  font-weight: 600;
 }
-.l-page-multi-purpose{
-  a{
-    color: #FF5A1F;
+
+.l-page-multi-purpose {
+  a {
+    color: #ff5a1f;
   }
-  h2{
+
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
     font-weight: 600;
     font-size: 18px;
-    margin-bottom: 15px;
-    margin-top: 30px;
   }
-  p{
+
+  p {
     margin-bottom: 15px;
     // padding-left: 1em;
     // text-indent: -1em;
   }
-  ul,ol{
+
+  ul,
+  ol {
     margin-bottom: 15px;
     padding-left: 20px;
-
   }
-  ul{
-    li{
-      &::before{
-      content:'・';
+
+  ul {
+    li {
+      &::before {
+        content: '・';
       }
     }
   }
-  ol{
+
+  ol {
     list-style: decimal;
   }
 }
