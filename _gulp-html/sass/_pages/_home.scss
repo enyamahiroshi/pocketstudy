@@ -106,6 +106,7 @@ HOME
 //kv
 .kv {
   padding: 12.8vw 5% 11.5vw;
+  background-color: #F9F9F9;
   .kv__image {
     margin: 0 auto;
     img {
@@ -250,7 +251,7 @@ HOME
     }
 
     //交互
-    &:nth-of-type(odd) {
+    &:nth-of-type(even) {
       flex-direction: row-reverse;
     }
   }
@@ -409,4 +410,11 @@ HOME
       margin-top: 20px;
     }
   }
+}
+
+/* ----------------------------------------------------------------
+poke
+---------------------------------------------------------------- */
+.bgc-gray{
+  background-color: #f9f9f9;
 }

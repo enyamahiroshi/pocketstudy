@@ -3,28 +3,32 @@
 ---------------------------------------------------------------- */
 .page-title,
 .contents-title {
-  font-size: 2.7rem;
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: .03em;
   color: $mainColor;
+  letter-spacing: .03em;
+  font-weight: bold;
+  font-size: 2.7rem;
+  line-height: 1.2;
+
   span {
     margin-left: 1em;
-    font-size: 1.2rem;
-    font-weight: 300;
-    letter-spacing: .06em;
     color: $baseColor;
+    letter-spacing: .06em;
+    font-weight: 300;
+    font-size: 1.2rem;
   }
 }
-@include res_min( $break ){
+
+@include res_min($break) {
+
   .page-title,
   .contents-title {
-      vertical-align: bottom;
-      font-size: 3.2rem;
+    vertical-align: bottom;
+    font-size: 3.2rem;
+
     span {
       vertical-align: middle;
-      font-size: 2.5rem;
       letter-spacing: .03em;
+      font-size: 2.5rem;
     }
   }
 }
@@ -32,7 +36,8 @@
 .page-title {
   margin-top: 20px;
 }
-@include res_min( $break ){
+
+@include res_min($break) {
   .page-title {
     margin-top: 50px;
   }
@@ -40,12 +45,13 @@
 
 .block-title1 {
   display: inline-block;
-  font-size: 2.2rem;
-  font-weight: 600;
-  line-height: 1.2;
   border-bottom: 2px solid $mainColor;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 1.2;
 }
-@include res_min( $break ){
+
+@include res_min($break) {
   .block-title1 {
     font-size: 3rem;
   }
@@ -53,11 +59,12 @@
 
 .block-title2 {
   margin: 1.8em auto 1em;
+  border-bottom: 2px dotted $mainColor;
   font-size: 2rem;
   line-height: 1.2;
-  border-bottom: 2px dotted $mainColor;
 }
-@include res_min( $break ){
+
+@include res_min($break) {
   .block-title2 {
     font-size: 2.5rem;
   }
@@ -65,12 +72,13 @@
 
 .block-title3 {
   margin: 0 auto 1em;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.2;
   border-bottom: 2px dotted $mainColor;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.2;
 }
-@include res_min( $break ){
+
+@include res_min($break) {
   .block-title3 {
     font-size: 3rem;
   }
@@ -84,29 +92,36 @@
   margin-top: 2em;
   text-align: center;
 }
-@include res_min( $break ){
+
+@include res_min($break) {
   .button-wrap {
     text-align: left;
   }
 }
 
 .button {
+  position: relative;
   display: inline-flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  padding-left: 2em;
   padding-right: 2em;
+  padding-left: 2em;
   border-radius: 4px;
   line-height: 1.5;
-  position: relative;
+
+  align-items: center;
+  flex-wrap: nowrap;
   @include ls(.1);
+
   @include transition;
-  &:link, &:visited {
-    text-decoration: none;
+  justify-content: center;
+
+  &:link,
+  &:visited {
     color: #fff;
+    text-decoration: none;
   }
-  &:hover, &:active {
+
+  &:hover,
+  &:active {
     opacity: .8;
   }
 
@@ -116,36 +131,46 @@
     background-color: #005014;
   }
 
+  &__desable {
+    background-color: #e1e1e1;
+    color: #fff;
+    pointer-events: none;
+  }
+
   // orange
   &__orange {
-    padding: .8em 3em;
     margin: 0 auto;
-    background-color: $mainColor;
+    padding: .8em 3em;
     border-radius: 2px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.67;
+    background-color: $mainColor;
     text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.67;
+
     &::after {
-      content: '';
       margin-left: .5em;
       width: 13px;
       height: 12px;
       background-image: url(../images/common/icon-arrow1.svg);
-      background-repeat: no-repeat;
       background-position: left center;
       background-size: 100%;
+      background-repeat: no-repeat;
+      content: '';
     }
   }
 
   // 未稼働
   &.closed {
-    pointer-events: none;
+    border: 1px solid #d3d3d4;
     background-color: #fff;
-    border: 1px solid #D3D3D4;
-    &:link, &:visited {
-      color: #D3D3D4;
+    pointer-events: none;
+
+    &:link,
+    &:visited {
+      color: #d3d3d4;
     }
+
     &.button__orange {
       &::after {
         background-image: url(../images/common/icon-arrow2.svg);
@@ -153,16 +178,17 @@
     }
   }
 }
-@include res_min( $break ){
+
+@include res_min($break) {
   .button {
-    padding-left: 4em;
     padding-right: 4em;
+    padding-left: 4em;
 
     // orange
     &__orange {
       padding: 1em 4em;
-      font-size: 1.6rem;
       border-radius: 4px;
+      font-size: 1.6rem;
     }
   }
 }
@@ -175,38 +201,49 @@
 .list-archive {
   .item {
     padding: 10px 0 8px;
-    border-bottom: 1px solid #D3D3D4;
+    border-bottom: 1px solid #d3d3d4;
+
     &:first-of-type {
-      border-top: 1px solid #D3D3D4;
+      border-top: 1px solid #d3d3d4;
     }
+
     .item__date {
       font-size: 1.2rem;
       line-height: 1.5;
     }
+
     .item__content {
       margin-top: 3px;
       line-height: 1;
+
       .item__content__title {
         font-size: 1.5rem;
         line-height: 1.5;
-        &:link, &:visited {
+
+        &:link,
+        &:visited {
           text-decoration: none;
         }
       }
     }
   }
 }
-@include res_min( $break ){
+
+@include res_min($break) {
   .list-archive {
     .item {
       padding: 16px 38px;
-      @include flex(nowrap, flex-start ,center);
+
+      @include flex(nowrap, flex-start, center);
+
       .item__date {
         margin-right: 36px;
         font-size: 1.6rem;
       }
+
       .item__content {
         margin-top: 0;
+
         .item__content__title {
           font-size: 2rem;
         }
@@ -226,16 +263,20 @@
   bottom: 40px;
   z-index: 9999px;
   opacity: 0;
+
   &.is-fixed {
     opacity: 1;
   }
+
   img {
     width: 30px;
   }
 }
-@include res_min( $break ){
+
+@include res_min($break) {
   .button-pagetop {
     right: 32px;
+
     img {
       width: 60px;
     }
@@ -244,15 +285,20 @@
 
 // telリンク
 .tel-link {
-  &:link, &:visited {
+
+  &:link,
+  &:visited {
     text-decoration: none;
   }
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     outline: none;
     text-decoration: none;
   }
 }
-@include res_min( $break ){
+
+@include res_min($break) {
   .tel-link {
     pointer-events: none;
   }

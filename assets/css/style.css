@@ -314,7 +314,7 @@ a img{
 ---------------------------------------------------------------- */
 .page-title,
 .contents-title{
-  color: #ff5a1f; 
+  color: #ff5a1f;
   letter-spacing: .03em;
   font-weight: bold;
   font-size: 2.7rem;
@@ -323,7 +323,7 @@ a img{
 .page-title span,
 .contents-title span{
   margin-left: 1em;
-  color: #000; 
+  color: #000;
   letter-spacing: .06em;
   font-weight: 300;
   font-size: 1.2rem;
@@ -335,7 +335,7 @@ a img{
 
 .block-title1{
   display: inline-block;
-  border-bottom: 2px solid #ff5a1f; 
+  border-bottom: 2px solid #ff5a1f;
   font-weight: 600;
   font-size: 2.2rem;
   line-height: 1.2;
@@ -343,14 +343,14 @@ a img{
 
 .block-title2{
   margin: 1.8em auto 1em;
-  border-bottom: 2px dotted #ff5a1f; 
+  border-bottom: 2px dotted #ff5a1f;
   font-size: 2rem;
   line-height: 1.2;
 }
 
 .block-title3{
   margin: 0 auto 1em;
-  border-bottom: 2px dotted #ff5a1f; 
+  border-bottom: 2px dotted #ff5a1f;
   font-weight: 600;
   font-size: 2rem;
   line-height: 1.2;
@@ -375,7 +375,7 @@ a img{
   border-radius: 4px;
   letter-spacing: .1em;
   line-height: 1.5;
-  transition: all .15s linear 0s; 
+  transition: all .15s linear 0s;
 
   align-items: center;
   -ms-flex-wrap: nowrap;
@@ -384,7 +384,7 @@ a img{
 }
 .button:link,
 .button:visited{
-  color: #fff; 
+  color: #fff;
   text-decoration: none;
 }
 .button:hover,
@@ -395,12 +395,17 @@ a img{
   height: 45px;
   background-color: #005014;
 }
+.button__desable{
+  background-color: #e1e1e1;
+  color: #fff;
+  pointer-events: none;
+}
 .button__orange{
   margin: 0 auto;
   padding: .8em 3em;
   border-radius: 2px;
   background-color: #ff5a1f;
-  text-align: center; 
+  text-align: center;
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 1.67;
@@ -411,12 +416,12 @@ a img{
   height: 12px;
   background-image: url(../images/common/icon-arrow1.svg);
   background-position: left center;
-  background-size: 100%; 
+  background-size: 100%;
   background-repeat: no-repeat;
   content: '';
 }
 .button.closed{
-  border: 1px solid #d3d3d4; 
+  border: 1px solid #d3d3d4;
   background-color: #fff;
   pointer-events: none;
 }
@@ -556,7 +561,7 @@ a img{
 
 .global-menu{
   margin-top: 55px;
-  background-color: #d3d3d4;
+  background-color: #f7f8f8;
 }
 .global-menu .menu__item:not(:first-of-type){
   margin-top: 1.5em;
@@ -589,7 +594,7 @@ a img{
 }
 
 .policy-menu{
-  background-color: #d3d3d4;
+  background-color: #f7f8f8;
 }
 .policy-menu .menu__item:not(:first-of-type){
   margin-top: 1em;
@@ -779,6 +784,7 @@ HOME
 ---------------------------------------------------------------- */
 .kv{
   padding: 12.8vw 5% 11.5vw;
+  background-color: #f9f9f9;
 }
 .kv .kv__image{
   margin: 0 auto;
@@ -952,6 +958,13 @@ HOME
 }
 .sec-news .list-archive{
   margin-top: 5px;
+}
+
+/* ----------------------------------------------------------------
+poke
+---------------------------------------------------------------- */
+.bgc-gray{
+  background-color: #f9f9f9;
 }
 
 /* ----------------------------------------------------------------
@@ -1215,7 +1228,7 @@ HOME
   .page-title span,
   .contents-title span{
     vertical-align: middle;
-    letter-spacing: .03em; 
+    letter-spacing: .03em;
     font-size: 2.5rem;
   }
   .page-title{
@@ -1234,12 +1247,12 @@ HOME
     text-align: left;
   }
   .button{
-    padding-right: 4em; 
+    padding-right: 4em;
     padding-left: 4em;
   }
   .button__orange{
     padding: 1em 4em;
-    border-radius: 4px; 
+    border-radius: 4px;
     font-size: 1.6rem;
   }
   .list-archive .item{
@@ -1483,7 +1496,7 @@ HOME
     flex-basis: calc(50% - 70px); 
     -ms-flex-preferred-size: calc(50% - 70px);
   }
-  .sec-separate:nth-of-type(odd){
+  .sec-separate:nth-of-type(even){
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
   }
