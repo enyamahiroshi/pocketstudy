@@ -48,9 +48,6 @@
   const headerHeight = pageHeader.height();
   const speed = 200;
   $(anchor).on('tap click', function () {
-    body.removeClass('is-open');
-    header.removeClass('is-open');
-
     const href= $(this).attr("href");
     const target = href == "#" || href == "" ? 'html' : href;
     const position = $(target).offset().top - headerHeight;

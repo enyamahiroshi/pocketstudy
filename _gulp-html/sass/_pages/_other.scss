@@ -213,7 +213,9 @@
     font-size: 16px;
   }
 }
-
+#form_submit{
+  margin-bottom: 40px;
+}
 #form_submit_button {
   display: block;
   margin: 40px auto 0;
@@ -231,7 +233,10 @@
     margin: 50px auto 0;
   }
 }
-
+.bl_formSmall{
+  color: #454545;
+  font-size: 14px;
+}
 .thanksBodyimg {
   display: block;
   margin: 50px auto 80px;
