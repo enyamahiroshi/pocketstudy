@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FZ9WXH');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>お問い合わせ | ポケットスタディ</title>
+  <meta name="description" content="ポケットスタディへのお問い合わせはこちらかどうぞ。ご不明点があれば、直接事務局までお問い合わせください。">
+  <meta property="og:image" content="https://pocket-study.com/assets/img/ogp.png">
+  <meta property="og:title" content="お問い合わせ | ポケットスタディ">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pocket-study.com/contact.html">
+  <meta property="og:description" content="ポケットスタディへのお問い合わせはこちらかどうぞ。ご不明点があれば、直接事務局までお問い合わせください。">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/custom.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body id="top">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FZ9WXH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="header">
+  <div class="header__logo">
+    <a href="/" class="header__logo__image"><img src="/assets/images/common/logo-main.png" alt="ポケットスタディ" width="514" height="106"></a>
+  </div>
+  <nav class="header__navi">
+    <ul class="header__navi__menu global-menu">
+      <li class="menu__item"><a href="/" class="menu__item__news sp">トップページ</a></li>
+      <li class="menu__item"><a href="/#sec01">家庭教師を探す</a></li>
+      <li class="menu__item"><a href="/#sec02">質問をする</a></li>
+      <li class="menu__item"><a href="/login/" class="button__desable button button__green">ログイン</a></li>
+    </ul>
+    <ul class="header__navi__menu page-menu sp">
+      <li class="menu__item"><a class="link-desable" href="#">使い方ガイド</a></li>
+      <li class="menu__item"><a class="link-desable" href="#">お知らせ</a></li>
+      <li class="menu__item"><a href="/termsofservice.html">利用規約</a></li>
+      <li class="menu__item"><a href="/company.html">運営会社</a></li>
+      <li class="menu__item"><a href="/contact.html">お問い合わせ</a></li>
+    </ul>
+    <ul class="header__navi__menu policy-menu sp">
+      <li class="menu__item"><a href="/tokusho.html">特定商取引法に基づく表記</a></li>
+      <li class="menu__item"><a href="/payact.html">資金決済法に基づく表記</a></li>
+      <li class="menu__item"><a href="/cancellation.html">キャンセルポリシー</a></li>
+      <li class="menu__item"><a href="/privacy.html">プライバシーポリシー</a></li>
+    </ul>
+  </nav>
+  <button class="menu-button js-tgl-menu"><span class="menu-button__line"></span>
+    <div class="menu-button__text"></div>
+  </button>
+</header>
+
+  <main class="main main_other">
+    <section id="formbox" class="sec sec__other">
+      <h2 class="page-heading">お問い合わせ</h2>
+      <p class="form_txt"><span>「ポケットスタディ」に関するお問合せをフォームから受け付けております。</span></p>
+      <form id="mail_form" action="php/mailform.php" method="post">
+        <dl>
+          <div class="mail_formItem">
+            <dt class="dt_required">お名前</dt>
+            <dd class="required">
+              <input id="name" type="text" name="name" value="" placeholder="入力してください">
+            </dd>
+          </div>
+
+          <div class="mail_formItem">
+            <dt class="dt_required">ふりがな</dt>
+            <dd class="required">
+              <input id="name_kana" type="text" name="name_kana" value="" placeholder="入力してください">
+            </dd>
+          </div>
+
+          <div class="mail_formItem">
+            <dt class="dt_required">メールアドレス</dt>
+            <dd class="required">
+              <input id="mail_address" type="email" name="mail_address" value="" placeholder="入力してください">
+            </dd>
+          </div>
+
+          <div class="mail_formItem">
+            <dt>電話番号</dt>
+            <dd>
+              <input id="tel" type="text" name="tel" value="" placeholder="入力してください">
+            </dd>
+          </div>
+
+          <div class="mail_formItem">
+            <dt class="dt_required">お問い合わせ種別</dt>
+            <dd class="required">
+              <select class="mail_formItem_select" id="product" name="product">
+                <option value="">選択してください</option>
+                <option value="アプリについて">アプリについて</option>
+                <option value="ご質問">ご質問</option>
+                <option value="ご意見・ご要望">ご意見・ご要望</option>
+                <option value="メディア取材">メディア取材</option>
+                <option value="その他">その他</option>
+              </select>
+            </dd>
+          </div>
+
+          <div class="mail_formItem">
+            <dt class="dt_required">お問い合わせの内容</dt>
+            <dd class="required">
+              <textarea id="contents" name="contents" cols="40" rows="5" placeholder="入力して下さい"></textarea>
+            </dd>
+          </div>
+        </dl>
+
+        <p id="form_submit">
+          <input id="form_submit_button" type="button" value="送信する">
+        </p>
+        <small>
+          ※このページは、SSL接続により通信が暗号化されています。<br>
+          ※個人情報は、プライバシーポリシーに基づき慎重に管理いたします。
+        </small>
+      </form>
+
+    </section>
+
+    <ul class="breadcrumb">
+      <li><a href="/">HOME </a></li>
+      <li>お問い合わせ</li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <!-- only pc -->
+    <div class="footer__navi pc">
+      <ul class="footer__navi__menu page-menu">
+        <li class="menu__item"><a href="#" class="link-desable">使い方ガイド</a></li>
+        <li class="menu__item"><a href="#" class="link-desable">お知らせ</a></li>
+        <li class="menu__item"><a href="/termsofservice.html">利用規約</a></li>
+        <li class="menu__item"><a href="/company.html">運営会社</a></li>
+        <li class="menu__item"><a href="/contact.html">お問い合わせ</a></li>
+      </ul>
+      <ul class="footer__navi__menu policy-menu">
+        <li class="menu__item"><a href="/tokusho.html">特定商取引法に基づく表記</a></li>
+        <li class="menu__item"><a href="/payact.html">資金決済法に基づく表記</a></li>
+        <li class="menu__item"><a href="/cancellation.html">キャンセルポリシー</a></li>
+        <li class="menu__item"><a href="/privacy.html">プライバシーポリシー</a></li>
+      </ul>
+    </div>
+    <div class="copyright">＠2022 ポケットスタディ</div>
+  </footer>
+
+  <a href="#top" class="button-pagetop js-scroll-top"><i><img src="/assets/images/common/icon_page-top.svg" alt="Page Top" width="60" height="60"></i></a>
+
+  <script src="/assets/js/jquery-3.4.1.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/mailform-js.php"></script>
+</body>
+</html>
